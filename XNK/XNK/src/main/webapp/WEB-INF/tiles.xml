@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="adminLayout"
+		template="/WEB-INF/views/admin/layouts/adminLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="navbar"
+			value="/WEB-INF/views/admin/layouts/navbar.jsp" />
+		<put-attribute name="sidebar"
+			value="/WEB-INF/views/admin/layouts/sidebar.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+	<!-- Admin Home Page -->
+	<definition name="adminIndex" extends="adminLayout">
+		<put-attribute name="title" value="Trang chủ" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/layouts/index.jsp" />
+	</definition>
+
+
+
+	<!-- User -->
+	<definition name="userLayout"
+		template="/WEB-INF/views/admin/layouts/adminLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="navbar"
+			value="/WEB-INF/views/user/layouts/navbar.jsp" />
+		<put-attribute name="sidebar"
+			value="/WEB-INF/views/user/layouts/sidebar.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+	<!-- User Home Page -->
+	<definition name="userIndex" extends="userLayout">
+		<put-attribute name="title" value="Trang chủ" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/user/layouts/index.jsp" />
+	</definition>
+	<definition name="userAddGood" extends="userLayout">
+		<put-attribute name="title" value="Trang chủ" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/user/components/addGood.jsp" />
+	</definition>
+	<definition name="userGoodInfo" extends="userLayout">
+		<put-attribute name="title" value="Trang chủ" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/user/components/displaygood.jsp" />
+	</definition>
+	<definition name="userAddSupplier" extends="userLayout">
+		<put-attribute name="title" value="Trang chủ" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/user/components/addSupplier.jsp" />
+	</definition>
+</tiles-definitions>
